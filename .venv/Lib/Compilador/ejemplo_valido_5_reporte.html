@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte DanCode - ejemplo_valido_5.dan</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #4a5568;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .info {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .seccion {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #2d3748;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            border: 1px solid #e2e8f0;
+        }
+
+        .codigo-fuente {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #edf2f7;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f7fafc;
+        }
+
+        .success {
+            color: #38a169;
+            font-weight: bold;
+        }
+
+        .error {
+            color: #e53e3e;
+            font-weight: bold;
+        }
+
+        .error-table th, .error-table td {
+            background-color: #fff5f5;
+        }
+
+        .arbol {
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.4;
+        }
+
+        .resultado {
+            font-size: 18px;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .resultado.exito {
+            background-color: #c6f6d5;
+            color: #2f855a;
+        }
+
+        .resultado.fallo {
+            background-color: #fed7d7;
+            color: #c53030;
+        }
+
+        .token {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .identificador {
+            color: #4299e1;
+        }
+
+        .tipo {
+            color: #805ad5;
+            font-weight: bold;
+        }
+
+        .operador {
+            color: #ed8936;
+            font-weight: bold;
+        }
+
+        .puntuacion {
+            color: #718096;
+        }
+
+        .numero {
+            color: #48bb78;
+        }
+
+        .cadena {
+            color: #ed64a6;
+        }
+
+        .booleano {
+            color: #d69e2e;
+            font-weight: bold;
+        }
+
+        .palabra-reservada {
+            color: #9f7aea;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #718096;
+            font-size: 14px;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Reporte de Compilación DanCode</h1>
+        <div class="info">
+            <p>Archivo: <strong>ejemplo_valido_5.dan</strong></p>
+            <p>Fecha: 2025-05-01 22:36:53</p>
+        </div>
+    </header>
+
+    <div class="seccion">
+        <h2>Código Fuente</h2>
+        <pre class="codigo-fuente">saludar("Daniel");</pre>
+    </div>
+
+    
+    <div class="seccion">
+        <h2>Tabla de Símbolos</h2>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th>Línea</th>
+                <th>Alcance</th>
+            </tr>
+    
+        <tr>
+            <td>saludar</td>
+            <td>-</td>
+            <td>-</td>
+            <td>1</td>
+            <td>global</td>
+        </tr>
+        
+        <tr>
+            <td>Daniel</td>
+            <td>cadena</td>
+            <td>Daniel</td>
+            <td>1</td>
+            <td>global</td>
+        </tr>
+        
+        </table>
+    </div>
+    
+
+    
+    <div class="seccion">
+        <h2>Errores Léxicos</h2>
+        <table class="error-table">
+            <tr>
+                <th>Token</th>
+                <th>Línea</th>
+                <th>Mensaje</th>
+            </tr>
+    
+        <tr>
+            <td>(</td>
+            <td>1</td>
+            <td>Carácter ilegal '('</td>
+        </tr>
+        
+        <tr>
+            <td>)</td>
+            <td>1</td>
+            <td>Carácter ilegal ')'</td>
+        </tr>
+        
+        <tr>
+            <td>;</td>
+            <td>1</td>
+            <td>Carácter ilegal ';'</td>
+        </tr>
+        
+        <tr>
+            <td>(</td>
+            <td>1</td>
+            <td>Carácter ilegal '('</td>
+        </tr>
+        
+        <tr>
+            <td>)</td>
+            <td>1</td>
+            <td>Carácter ilegal ')'</td>
+        </tr>
+        
+        <tr>
+            <td>;</td>
+            <td>1</td>
+            <td>Carácter ilegal ';'</td>
+        </tr>
+        
+        </table>
+    </div>
+    
+
+    
+    <div class="seccion">
+        <h2>Errores Sintácticos</h2>
+        <table class="error-table">
+            <tr>
+                <th>Token</th>
+                <th>Línea</th>
+                <th>Token Esperado</th>
+                <th>Mensaje</th>
+                <th>Recuperación</th>
+            </tr>
+    
+        <tr>
+            <td>Daniel</td>
+            <td>1</td>
+            <td>Indeterminado</td>
+            <td>Error de sintaxis en 'Daniel'</td>
+            <td>Salto hasta ';' o token de sincronización</td>
+        </tr>
+        
+        <tr>
+            <td>EOF</td>
+            <td>EOF</td>
+            <td>-</td>
+            <td>Error de sintaxis al final del archivo</td>
+            <td>Salto hasta ';' o token de sincronización</td>
+        </tr>
+        
+        </table>
+    </div>
+    
+
+    
+        <div class="seccion">
+            <h2>Árbol de Derivación</h2>
+            <p class="error">❌ No se puede generar el árbol de derivación porque el código contiene errores sintácticos.</p>
+        </div>
+        
+
+    <div class="resultado fallo">
+        ❌ La compilación falló debido a errores.
+    </div>
+
+    <div class="footer">
+        <p>Generado por DanCode Compiler v1.0</p>
+    </div>
+</body>
+</html>
+    

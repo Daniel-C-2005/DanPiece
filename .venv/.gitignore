@@ -1,0 +1,16 @@
+# created by virtualenv automatically
+# Entornos virtuales
+.venv/
+env/
+
+# Archivos de cache
+__pycache__/
+*.py[cod]
+
+# Archivos de configuración de IDE
+.idea/
+.vscode/
+
+# Otros
+*.log
+
